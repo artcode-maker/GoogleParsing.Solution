@@ -19,7 +19,7 @@ namespace GoogleParsing.Views
         {
             string message = "Input Query String";
             Button button = sender as Button;
-            if(string.IsNullOrEmpty(entry.Text))
+            if(string.IsNullOrEmpty(entry.Text) || string.IsNullOrWhiteSpace(entry.Text))
             {
                 entry.Text = message;
                 return;
