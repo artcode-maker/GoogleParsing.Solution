@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GoogleParsing.ViewModels"
+             x:Class="GoogleParsing.Views.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <Grid x:Name="grid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="entry" Grid.ColumnSpan="2"></Entry>
+                <Image Grid.Column="1" Source="Images/google_search.png" HeightRequest ="20" WidthRequest="20" HorizontalOptions="End" />
+            </Grid>
+            <Button Text="Google Search" x:Name="searchButton" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <ListView x:Name="listView"></ListView>
+        </StackLayout>
+    </Grid>
+</ContentPage>
